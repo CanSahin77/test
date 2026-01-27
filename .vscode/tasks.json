@@ -1,18 +1,19 @@
 {
     "tasks": [
         {
+            
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
             "command": "C:\\mingw64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "-DSFML_STATIC",
-                "-IC:\\SFML-3.0.2\\include",
                 "main.cpp",
                 "menu.cpp",
                 "game.cpp",
-                "-LC:\\SFML-3.0.2\\lib",
+                "-IC:\\SFML-3.0.2_mingw64\\include",
+                "-LC:\\SFML-3.0.2_mingw64\\lib",
+                "-DSFML_STATIC",
                 "-lsfml-graphics-s",
                 "-lsfml-window-s",
                 "-lsfml-system-s",
@@ -20,6 +21,10 @@
                 "-lfreetype",
                 "-lwinmm",
                 "-lgdi32",
+                "-static-libgcc",
+                "-static-libstdc++",
+                "-static",  
+                "-lwinpthread",
                 "-mwindows",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
